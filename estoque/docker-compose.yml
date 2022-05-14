@@ -1,0 +1,10 @@
+services:
+  rabbitMq:
+    image: rabbitmq:3-management 
+    container_name: rabbit-estoque
+    ports:
+      - 8089:15672
+      - 5672:5672
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
